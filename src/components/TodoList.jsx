@@ -11,7 +11,7 @@ const TodoList = () => {
     return (
         <div>
             <h4>Todo List</h4>
-            <TodoGroup todoItemList={todoItemList} />
+            <TodoGroup />
             <TodoGenerator updateList={updateList} />
         </div>
     );

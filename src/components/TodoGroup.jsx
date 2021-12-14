@@ -1,6 +1,9 @@
 import TodoItem from "./TodoItem";
+import {useSelector} from "react-redux";
 
-const TodoGroup = ({todoItemList}) => {
+const TodoGroup = () => {
+    const {todoItemList} = useSelector(state => state);
+
     return (
         <div>
             {todoItemList.length > 0 ?

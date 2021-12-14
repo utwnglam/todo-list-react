@@ -1,4 +1,4 @@
-const todoListReducer = (state, action) => {
+const todoListReducer = (state = {todoItemList: []}, action) => {
     switch (action.type) {
         default:
             return state;
