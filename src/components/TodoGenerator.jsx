@@ -17,7 +17,11 @@ const TodoGenerator = ({updateList}) => {
                 value={currentInput}
                 onChange={handleChange}
             />
-            <button onClick={handleSubmit}>add</button>
+            <button
+                onClick={handleSubmit}
+                disabled={currentInput.length === 0}>
+                add
+            </button>
         </div>
     );
 }

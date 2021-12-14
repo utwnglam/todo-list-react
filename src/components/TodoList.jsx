@@ -5,7 +5,7 @@ import TodoGroup from "./TodoGroup";
 const TodoList = () => {
     const [todoItemList, setTodoItemList] = useState([]);
     const updateList = (newItem) => {
-        setTodoItemList([...todoItemList, newItem]);
+        setTodoItemList(oldTodoItemList => [...oldTodoItemList, newItem]);
     }
 
     return (
