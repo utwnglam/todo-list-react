@@ -1,5 +1,6 @@
 import {useState} from "react";
 import {useDispatch} from "react-redux";
+import {UPDATE_LIST} from "../constants/constants";
 
 const TodoGenerator = () => {
     const [currentInput, setCurrentInput] = useState('');
@@ -9,10 +10,9 @@ const TodoGenerator = () => {
         setCurrentInput(event.target.value);
     };
     const handleSubmit = () => {
-        dispatch({type: "updateList", payload: currentInput});
+        dispatch({type: UPDATE_LIST, payload: currentInput});
         setCurrentInput('');
     }
-
 
     return (
         <div>
