@@ -4,10 +4,10 @@ const TodoGroup = ({todoItemList}) => {
     return (
         <div>
             {todoItemList.length > 0 ?
-                (todoItemList.map((item, index) => (
+                (todoItemList.map((item, index) =>
                     <TodoItem key={index} content={item}/>
-                ))) : (
-                    <p>No result. Create a new one instead!</p>
+                )) : (
+                    <p>No todo. Create a new one!</p>
                 )}
         </div>
     )
