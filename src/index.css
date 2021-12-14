@@ -25,6 +25,9 @@ button {
   border: none;
   border-radius: 3px;
 }
+button:disabled {
+  background: gray;
+}
 
 input {
   border-radius: 3px;
