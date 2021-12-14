@@ -8,7 +8,7 @@ const TodoGroup = () => {
         <div>
             {todoItemList.length > 0 ?
                 (todoItemList.map((item, index) =>
-                    <TodoItem key={index} content={item}/>
+                    <TodoItem key={index} item={item}/>
                 )) : (
                     <p>No todo. Create a new one!</p>
                 )}

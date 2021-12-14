@@ -40,5 +40,13 @@ input {
   padding: 0 1em;
   border: 1px solid black;
   text-align: left;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.itemDone {
+  text-decoration-line: line-through;
 }
 
