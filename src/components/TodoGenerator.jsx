@@ -4,14 +4,17 @@ import {ADD_ITEM} from "../constants/constants";
 
 const TodoGenerator = () => {
     const [currentInput, setCurrentInput] = useState('');
+    const [id, setId] = useState(0);
     const dispatch = useDispatch();
 
     const handleChange = (event) => {
         setCurrentInput(event.target.value);
     };
     const handleSubmit = () => {
-        dispatch({type: ADD_ITEM, payload: currentInput});
+        const todoInfo = {id: id, text: currentInput, done: false};
+        dispatch({type: ADD_ITEM, payload: todoInfo});
         setCurrentInput('');
+        setId(id+1);
     }
 
     return (
@@ -20,7 +23,7 @@ const TodoGenerator = () => {
                 value={currentInput}
                 onChange={handleChange}
             />
-            <button
+            <button className="add-button"
                 onClick={handleSubmit}
                 disabled={currentInput.length === 0}>
                 add
