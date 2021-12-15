@@ -1,4 +1,4 @@
-import {ADD_ITEM, DELETE_ITEM, INIT_TODO, UPDATE_STATUS} from "../constants/constants";
+import {ADD_ITEM, DELETE_ITEM, INIT_TODO, UPDATE_ITEM} from "../constants/constants";
 
 const todoListReducer = (state = {todoItemList: []}, action) => {
     switch (action.type) {
@@ -8,7 +8,7 @@ const todoListReducer = (state = {todoItemList: []}, action) => {
         case ADD_ITEM:
             return {...state, todoItemList: [...state.todoItemList, action.payload]};
 
-        case UPDATE_STATUS:
+        case UPDATE_ITEM:
             const newListAfterUpdate = state.todoItemList.map(item => (
                 item.id === action.payload.id ? action.payload : item
             ));
