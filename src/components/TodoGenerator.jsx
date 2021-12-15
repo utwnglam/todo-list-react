@@ -12,7 +12,6 @@ const TodoGenerator = () => {
     };
     const handleSubmit = () => {
         addTodoItem({text: currentInput, done: false}).then((response) => {
-            console.log(response.data);
             dispatch({type: ADD_ITEM, payload: response.data});
         })
         .catch((error) => {
