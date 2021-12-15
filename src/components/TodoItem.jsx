@@ -7,7 +7,7 @@ import {deleteItem, updateItemStatus} from "../api/todos";
 import {useState} from "react";
 import {CloseOutlined, EditOutlined} from "@ant-design/icons";
 import Modal from '@mui/material/Modal';
-import TodoModal from "./TodoModal";
+import TodoModal from "./TodaModal/TodoModal";
 
 const TodoItem = ({item}) => {
     const [disabled, setDisabled] = useState(false);
