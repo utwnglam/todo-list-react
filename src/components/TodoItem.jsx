@@ -1,7 +1,7 @@
 import '../index.css';
 import {useDispatch} from "react-redux";
-import {DELETE_ITEM, UPDATE_STATUS} from "../constants/constants";
-import {deleteItem, updateItemStatus} from "../api/todos";
+import {DELETE_ITEM, UPDATE_ITEM} from "../constants/constants";
+import {deleteItem, updateItem} from "../api/todos";
 import {useState} from "react";
 import {CloseOutlined, EditOutlined} from "@ant-design/icons";
 import Modal from '@mui/material/Modal';
@@ -13,8 +13,9 @@ const TodoItem = ({item}) => {
 
     const dispatch = useDispatch();
     const updateDoneState = () => {
-        updateItemStatus(item).then((response) => {
-            dispatch({type: UPDATE_STATUS, payload: response.data});
+        const updatedItem = {...item, done: !item.done};
+        updateItem(updatedItem).then((response) => {
+            dispatch({type: UPDATE_ITEM, payload: response.data});
         }).catch((error) => {
             alert('Fail to update in database. message: ' + error.message);
         })
