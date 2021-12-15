@@ -3,6 +3,7 @@ import {useDispatch} from "react-redux";
 import {DELETE_ITEM, UPDATE_STATUS} from "../constants/constants";
 import {deleteItem, updateItemStatus} from "../api/todos";
 import {useState} from "react";
+import {CloseOutlined} from "@ant-design/icons";
 
 const TodoItem = ({item}) => {
     const [disabled, setDisabled] = useState(false);
@@ -34,8 +35,10 @@ const TodoItem = ({item}) => {
             <button
                 className="delete-button"
                 onClick={deleteTodo}
-                disabled={disabled}>❌
+                disabled={disabled}>
+                <CloseOutlined style={{fontSize: 16}} />
             </button>
+
         </div>
     );
 }
