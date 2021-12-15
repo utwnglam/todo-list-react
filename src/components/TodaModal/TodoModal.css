@@ -1,3 +1,7 @@
+h4 {
+    margin-top: 0;
+}
+
 .modal-body {
     position: absolute;
     padding: 3em;
@@ -7,4 +11,12 @@
     width: 30%;
     background: white;
     border: 2px solid #000;
+}
+
+.cancel-button {
+    padding: 5px 15px;
+    background: white;
+    border: 1px solid black;
+    border-radius: 3px;
+    cursor: pointer;
 }

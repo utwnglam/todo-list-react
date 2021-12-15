@@ -26,7 +26,7 @@ const TodoGenerator = () => {
                 value={currentInput}
                 onChange={handleChange}
             />
-            <button className="add-button"
+            <button className="regular-button"
                 onClick={handleSubmit}
                 disabled={currentInput.length === 0}>add
             </button>

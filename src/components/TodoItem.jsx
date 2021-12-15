@@ -1,5 +1,3 @@
-import * as React from 'react';
-import ReactDOM from 'react-dom';
 import '../index.css';
 import {useDispatch} from "react-redux";
 import {DELETE_ITEM, UPDATE_STATUS} from "../constants/constants";
@@ -56,7 +54,7 @@ const TodoItem = ({item}) => {
             <button
                 className="todo-item-button"
                 onClick={() => setIsModalOpen(!isModalOpen)}>
-                <EditOutlined />
+                <EditOutlined style={{fontSize: 16}} />
             </button>
 
         </div>

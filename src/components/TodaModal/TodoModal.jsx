@@ -3,9 +3,10 @@ import './TodoModal.css';
 const TodoModal = () => {
     return (
         <div className="modal-body">
-            <input />
-            <button>OK</button>
-            <button>Cancel</button>
+            <h4>Edit Modal</h4>
+            <input type="para"/>
+            <button className="regular-button">OK</button>
+            <button className="cancel-button">Cancel</button>
         </div>
     );
 }
