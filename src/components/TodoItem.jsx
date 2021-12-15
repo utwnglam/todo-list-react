@@ -29,8 +29,8 @@ const TodoItem = ({item}) => {
             alert('Fail to delete in database. message: ' + error.message);
         })
     };
-    const editTodo = () => {
-      
+    const toggleModalOpen = () => {
+        setIsModalOpen(!isModalOpen);
     }
 
     const todoStatus = item.done ? "item-done" : "";
@@ -38,10 +38,9 @@ const TodoItem = ({item}) => {
         <div className="todo-item">
             <Modal
                 open={isModalOpen}
-                onClose={editTodo}
                 aria-labelledby="modal-modal-title"
                 aria-describedby="modal-modal-description"
-                children={<TodoModal />} />
+                children={<TodoModal item={item} toggleModalOpen={toggleModalOpen}/>} />
             <span className={`todo-item-text ${todoStatus}`} onClick={updateDoneState}>
                 <p>{item.text}</p>
             </span>
