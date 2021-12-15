@@ -34,12 +34,12 @@ input {
 .add-button:disabled {
   background: gray;
 }
-.delete-button {
+.todo-item-button {
   background: transparent;
   border: none;
   cursor: pointer;
 }
-.delete-button:disabled {
+.todo-item-button:disabled {
   filter: grayscale(0.9);
 }
 
