@@ -11,7 +11,7 @@ const TodoGenerator = () => {
         setCurrentInput(event.target.value);
     };
     const handleSubmit = () => {
-        const todoInfo = {id: id, text: currentInput, done: false};
+        const todoInfo = {id, text: currentInput, done: false};
         dispatch({type: ADD_ITEM, payload: todoInfo});
         setCurrentInput('');
         setId(id+1);
@@ -25,8 +25,7 @@ const TodoGenerator = () => {
             />
             <button className="add-button"
                 onClick={handleSubmit}
-                disabled={currentInput.length === 0}>
-                add
+                disabled={currentInput.length === 0}>add
             </button>
         </div>
     );
