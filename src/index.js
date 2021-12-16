@@ -1,11 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import {Provider} from "react-redux";
+import {createStore} from "redux";
+
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import {createStore} from "redux";
 import todoListReducer from "./reducers/todoListReducer";
-import {Provider} from "react-redux";
+import './index.css';
 
 const store = createStore(todoListReducer,
     window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());

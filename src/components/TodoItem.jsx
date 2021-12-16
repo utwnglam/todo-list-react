@@ -1,11 +1,12 @@
-import '../index.css';
-import {useDispatch} from "react-redux";
-import {DELETE_ITEM, UPDATE_ITEM} from "../constants/constants";
-import {deleteItem, updateItem} from "../api/todos";
 import {useState} from "react";
+import {useDispatch} from "react-redux";
 import {CloseOutlined, EditOutlined} from "@ant-design/icons";
 import Modal from '@mui/material/Modal';
+
 import TodoModal from "./TodaModal/TodoModal";
+import {deleteItem, updateItem} from "../api/todos";
+import {DELETE_ITEM, UPDATE_ITEM} from "../constants/constants";
+import '../index.css';
 
 const TodoItem = ({item}) => {
     const [disabled, setDisabled] = useState(false);
@@ -40,7 +41,7 @@ const TodoItem = ({item}) => {
                 open={isModalOpen}
                 aria-labelledby="modal-modal-title"
                 aria-describedby="modal-modal-description"
-                children={<TodoModal item={item} toggleModalOpen={toggleModalOpen}/>} />
+                children={<TodoModal item={item} toggleModalOpen={toggleModalOpen}/>}/>
             <span className={`todo-item-text ${todoStatus}`} onClick={updateDoneState}>
                 <p>{item.text}</p>
             </span>
@@ -48,13 +49,14 @@ const TodoItem = ({item}) => {
                 className="todo-item-button"
                 onClick={deleteTodo}
                 disabled={disabled}>
-                <CloseOutlined style={{fontSize: 16}} />
+                <CloseOutlined className="button-icon"/>
             </button>
 
             <button
                 className="todo-item-button"
-                onClick={() => setIsModalOpen(!isModalOpen)}>
-                <EditOutlined style={{fontSize: 16}} />
+                onClick={() => setIsModalOpen(!isModalOpen)}
+                disabled={item.done}>
+                <EditOutlined className="button-icon"/>
             </button>
 
         </div>

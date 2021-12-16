@@ -1,9 +1,10 @@
-import TodoGenerator from "./TodoGenerator";
-import TodoGroup from "./TodoGroup";
 import {useEffect} from "react";
 import {useDispatch} from "react-redux";
-import {INIT_TODO} from "../constants/constants";
+
+import TodoGenerator from "./TodoGenerator";
+import TodoGroup from "./TodoGroup";
 import {getTodoList} from "../api/todos";
+import {INIT_TODO} from "../constants/constants";
 
 const TodoList = () => {
     const dispatch = useDispatch();

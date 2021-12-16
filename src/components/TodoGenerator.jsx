@@ -1,7 +1,8 @@
 import {useState} from "react";
 import {useDispatch} from "react-redux";
-import {ADD_ITEM} from "../constants/constants";
+
 import {addTodoItem} from "../api/todos";
+import {ADD_ITEM} from "../constants/constants";
 
 const TodoGenerator = () => {
     const [currentInput, setCurrentInput] = useState('');

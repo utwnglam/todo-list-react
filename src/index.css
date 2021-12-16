@@ -7,7 +7,6 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
@@ -57,9 +56,13 @@ input {
   text-align: left;
   cursor: pointer;
 }
-
 .item-done {
   text-decoration-line: line-through;
   text-decoration-thickness: 2px;
+}
+
+.button-icon {
+  font-size: 18px;
+  color: #2f7373;
 }
 
